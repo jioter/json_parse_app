@@ -4,7 +4,7 @@ import FileForm from './uploadFileComponent';
 function App() {
   return (
     <div className="App">
-      <h1>Process JSON file app </h1>
+      <h1>Process JSON file APP </h1>
       
       <FileForm/>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import getUploadFile from './getElementById';
+import getUploadFile from './getUploadFile';
 
 class FileForm extends React.Component {
     constructor(props) {
@@ -25,7 +25,7 @@ class FileForm extends React.Component {
               onSubmit={this.handleSubmit}>
 
           <label> Please, select JSON file  </label>
-          
+
             <input type="file"
              name="inputFile" 
              id="inputFiled" 
