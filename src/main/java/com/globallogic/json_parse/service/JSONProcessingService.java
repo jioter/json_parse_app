@@ -1,11 +1,11 @@
 package com.globallogic.json_parse.service;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.globallogic.json_parse.entity.ResponseVO;
 import com.globallogic.json_parse.entity.inputJSON.Root;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import org.springframework.stereotype.Service;
-
 
 import java.io.ByteArrayOutputStream;
 import java.util.Arrays;
@@ -42,7 +42,7 @@ public class JSONProcessingService {
         for (ResponseVO el : data) {
             outputStream.write(convertResponseVOtoByteArray(el));
 
-        byteArrayOfResponseVO = outputStream.toByteArray();
+            byteArrayOfResponseVO = outputStream.toByteArray();
 
         }
         return byteArrayOfResponseVO;
@@ -61,7 +61,7 @@ public class JSONProcessingService {
     }
 
     @SneakyThrows
-    private byte[] convertResponseVOtoByteArray(ResponseVO responseVO){
+    private byte[] convertResponseVOtoByteArray(ResponseVO responseVO) {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 
         outputStream.write(responseVO.getTac().getBytes());
